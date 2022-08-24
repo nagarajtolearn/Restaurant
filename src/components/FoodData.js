@@ -8,10 +8,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: " 1175 + order placed from here recently",
-    price: "₹350 for one",
+    price: "350",
     rating: "3.8",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 2,
@@ -22,10 +23,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: " 2525 + order placed from here recently",
-    price: "₹25 for one",
+    price: "25",
     rating: "3.9",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 3,
@@ -36,10 +38,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: " 650 + order placed from here recently",
-    price: "₹70 for one",
+    price: "70",
     rating: "4.2",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 4,
@@ -50,10 +53,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: " 300 + order placed from here recently",
-    price: "₹70 for one",
+    price: "70",
     rating: "3.8",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 5,
@@ -64,10 +68,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: "1050 + order placed from here recently",
-    price: "₹210 for one",
+    price: "210",
     rating: "4.0",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 6,
@@ -78,10 +83,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: " 1100 + order placed from here recently",
-    price: "₹100 for one",
+    price: "100",
     rating: "3.8",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 7,
@@ -92,10 +98,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: "500 + order placed from here recently",
-    price: "₹300 for one",
+    price: "300",
     rating: "3.8",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 8,
@@ -106,10 +113,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: "500 + order placed from here recently",
-    price: "₹100 for one",
+    price: "100",
     rating: "3.2",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
   {
     id: 9,
@@ -120,10 +128,11 @@ const Fooddata = [
     delimg:
       "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp",
     somedata: "2525 + order placed from here recently",
-    price: "₹100 for one",
+    price: "100",
     rating: "3.8",
     arrimg:
       "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp",
+    quantity: 0,
   },
 ];
 

@@ -5,10 +5,15 @@ import Stack from "@mui/material/Stack";
 const Set = ({ fdata }) => {
   return (
     <>
-      {fdata.map((elem, k) => {
+      {fdata.map((item, k) => {
         return (
           <>
-            <Stack spacing={1} style={{ width: "22rem" }} className="mb-4">
+            <Stack
+              spacing={1}
+              style={{ width: "22rem" }}
+              className="mb-4"
+              key={item.id}
+            >
               <Skeleton
                 variant="rectangular"
                 animation="wave"

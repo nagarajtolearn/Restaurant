@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import FoodData from "./FoodData";
-import appLogo from "../restaurant-logo.jpg";
 import Form from "react-bootstrap/Form";
 import Cards from "./Cards";
 import Set from "./Set";
+import { useSelector } from "react-redux";
+import NavBar from "./NavBar";
 
 const Search = () => {
   const [fData, setFdata] = useState(FoodData);
   const [copydata, setCopyData] = useState([]);
+
+  const getData = useSelector((state) => state.cart.cartDetails);
 
   const changeData = (e) => {
     let getchangeData = e.toLowerCase();
@@ -31,30 +34,9 @@ const Search = () => {
 
   return (
     <>
-      <div className="container d-flex justify-content-between aglin-items-center">
-        <img
-          src={appLogo}
-          alt="app-logo"
-          style={{
-            width: "10rem",
-            position: "relative",
-            left: "2%",
-            cursor: "pointer",
-            backgroundColor: "white",
-            marginTop: 20,
-          }}
-        />
-        <div className="signup d-flex justify-content-between aglin-items-center mt-3">
-          <p style={{ color: "#1b1464", cursor: "pointer" }} className="mt-3">
-            Log in
-          </p>
-          <p style={{ color: "#1b1464", cursor: "pointer" }} className="mt-3">
-            Sign in
-          </p>
-        </div>
-      </div>
+      <NavBar />
 
-      <Form className="d-flex justify-content-center align-items-center mt-3 ">
+      <Form className="d-flex justify-content-center align-items-center mt-5 ">
         <Form.Group className="mx-2 col-lg-4" controlId="formBasicEmail">
           <Form.Control
             type="text"
