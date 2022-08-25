@@ -36,7 +36,7 @@ const CardDetails = () => {
 
   useEffect(() => {
     compare();
-  }, [id]);
+  }, [id, getData]);
   return (
     <>
       <NavBar />
@@ -66,7 +66,7 @@ const CardDetails = () => {
                               <strong>Dishes :</strong> &nbsp;{item.address}
                             </p>
                             <p>
-                              <strong>Total :</strong>
+                              <strong>Total :</strong>₹
                               {item.price * item.quantity}
                             </p>
                             <div

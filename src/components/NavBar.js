@@ -7,14 +7,14 @@ import Menu from "@mui/material/Menu";
 import cart from "../cart.gif";
 import { useSelector, useDispatch } from "react-redux";
 import Table from "react-bootstrap/esm/Table";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { remove, del } from "../features/cart/cartSlice";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [price, setPrice] = useState(0);
   const getData = useSelector((state) => state.cart.cartDetails);
-
+  const history = useNavigate();
   const dispatch = useDispatch();
   const open = Boolean(anchorEl);
 
@@ -38,6 +38,7 @@ const NavBar = () => {
 
   const handleDelete = (id) => {
     dispatch(del(id));
+    history("/");
   };
 
   useEffect(() => {
