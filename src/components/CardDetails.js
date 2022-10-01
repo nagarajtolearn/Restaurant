@@ -8,18 +8,10 @@ import { add, remove, del } from "../features/cart/cartSlice";
 
 const CardDetails = () => {
   const [itemData, setItemData] = useState([]);
-  const [anchorEl, setAnchorEl] = useState(null);
   const getData = useSelector((state) => state.cart.cartDetails);
   const dispatch = useDispatch();
   const { id } = useParams();
   const history = useNavigate();
-
-  const compare = () => {
-    let itemdata = getData.filter((item) => {
-      return item.id == id;
-    });
-    setItemData(itemdata);
-  };
 
   const handleAddTocart = (item) => {
     dispatch(add(item));
@@ -35,6 +27,13 @@ const CardDetails = () => {
   };
 
   useEffect(() => {
+    const compare = () => {
+      let itemdata = getData.filter((item) => {
+        return item.id == id;
+      });
+      setItemData(itemdata);
+    };
+
     compare();
   }, [id, getData]);
   return (

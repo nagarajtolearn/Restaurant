@@ -21,7 +21,7 @@ const NavBar = () => {
   const total = () => {
     let price = 0;
     getData.map((item) => {
-      price = item.price * item.quantity + price;
+      return (price = item.price * item.quantity + price);
     });
     setPrice(price);
   };
@@ -31,9 +31,6 @@ const NavBar = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
-  };
-  const handleRemove = (id) => {
-    dispatch(remove(id));
   };
 
   const handleDelete = (id) => {
