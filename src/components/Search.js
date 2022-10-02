@@ -4,7 +4,6 @@ import FoodData from "./FoodData";
 import Form from "react-bootstrap/Form";
 import Cards from "./Cards";
 import Set from "./Set";
-import { useSelector } from "react-redux";
 import NavBar from "./NavBar";
 
 const Search = () => {

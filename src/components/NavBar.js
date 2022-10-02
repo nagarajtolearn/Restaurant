@@ -9,22 +9,16 @@ import { useSelector, useDispatch } from "react-redux";
 import Table from "react-bootstrap/esm/Table";
 import { NavLink, useNavigate } from "react-router-dom";
 import { del } from "../features/cart/cartSlice";
+import { useCallback } from "react";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [price, setPrice] = useState(0);
+  const [totalAmt, setTotalAmt] = useState(0);
   const getData = useSelector((state) => state.cart.cartDetails);
   const history = useNavigate();
   const dispatch = useDispatch();
   const open = Boolean(anchorEl);
-
-  const total = () => {
-    let price = 0;
-    getData.map((item) => {
-      return (price = item.price * item.quantity + price);
-    });
-    setPrice(price);
-  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -37,10 +31,19 @@ const NavBar = () => {
     dispatch(del(id));
     history("/");
   };
+  const total = useCallback(() => {
+    let price = 0;
+    getData.map((item) => {
+      price = item.price * item.quantity + price;
+    });
+    setPrice(price);
+    setTotalAmt(price);
+  });
 
   useEffect(() => {
     total();
   }, [total]);
+  console.log(total);
   return (
     <>
       <Navbar bg="dark" variant="dark">
