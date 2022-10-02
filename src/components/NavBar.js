@@ -14,7 +14,6 @@ import { useCallback } from "react";
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [price, setPrice] = useState(0);
-  const [totalAmt, setTotalAmt] = useState(0);
   const getData = useSelector((state) => state.cart.cartDetails);
   const history = useNavigate();
   const dispatch = useDispatch();
@@ -37,7 +36,6 @@ const NavBar = () => {
       price = item.price * item.quantity + price;
     });
     setPrice(price);
-    setTotalAmt(price);
   });
 
   useEffect(() => {
