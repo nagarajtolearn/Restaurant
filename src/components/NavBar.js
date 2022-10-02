@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import appLogo from "../restaurant-logo.jpg";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -9,7 +9,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Table from "react-bootstrap/esm/Table";
 import { NavLink, useNavigate } from "react-router-dom";
 import { del } from "../features/cart/cartSlice";
-import { useCallback } from "react";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,18 +29,16 @@ const NavBar = () => {
     dispatch(del(id));
     history("/");
   };
+
   const total = useCallback(() => {
-    let price = 0;
-    getData.map((item) => {
-      price = item.price * item.quantity + price;
-    });
-    setPrice(price);
+    let cost = 0;
+    getData.map((item) => (cost = item.price * item.quantity + cost));
+    setPrice(cost);
   });
 
   useEffect(() => {
     total();
   }, [total]);
-  console.log(total);
   return (
     <>
       <Navbar bg="dark" variant="dark">
