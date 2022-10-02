@@ -11,13 +11,12 @@ const Search = () => {
   const [fData, setFdata] = useState(FoodData);
   const [copydata, setCopyData] = useState([]);
 
-  const getData = useSelector((state) => state.cart.cartDetails);
-
   const changeData = (e) => {
     let getchangeData = e.toLowerCase();
 
-    if (getchangeData == "") {
+    if (getchangeData === "") {
       setCopyData(fData);
+      setFdata(fData);
     } else {
       let storeData = copydata.filter((ele, k) => {
         return ele.rname.toLowerCase().match(getchangeData);

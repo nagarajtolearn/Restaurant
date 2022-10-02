@@ -29,7 +29,7 @@ const CardDetails = () => {
   useEffect(() => {
     const compare = () => {
       let itemdata = getData.filter((item) => {
-        return item.id == id;
+        return item.id === parseInt(id);
       });
       setItemData(itemdata);
     };

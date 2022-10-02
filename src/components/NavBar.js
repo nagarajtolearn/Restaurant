@@ -8,7 +8,7 @@ import cart from "../cart.gif";
 import { useSelector, useDispatch } from "react-redux";
 import Table from "react-bootstrap/esm/Table";
 import { NavLink, useNavigate } from "react-router-dom";
-import { remove, del } from "../features/cart/cartSlice";
+import { del } from "../features/cart/cartSlice";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
