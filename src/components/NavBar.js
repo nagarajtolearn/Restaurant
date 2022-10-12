@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import appLogo from "../restaurant-logo.jpg";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -12,7 +12,7 @@ import { del } from "../features/cart/cartSlice";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState([]);
   const getData = useSelector((state) => state.cart.cartDetails);
   const history = useNavigate();
   const dispatch = useDispatch();
@@ -30,15 +30,15 @@ const NavBar = () => {
     history("/");
   };
 
-  const total = useCallback(() => {
-    let cost = 0;
-    getData.map((item) => (cost = item.price * item.quantity + cost));
-    setPrice(cost);
-  });
-
   useEffect(() => {
+    const total = () => {
+      let cost = 0;
+      getData.map((item) => (cost = item.price * item.quantity + cost));
+      setPrice(cost);
+    };
     total();
-  }, [total]);
+  }, [getData]);
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
